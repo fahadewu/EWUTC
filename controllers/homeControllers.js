@@ -1,0 +1,1 @@
+export const home = (req, res) => res.send("EWUTC CLUBS API HOME");

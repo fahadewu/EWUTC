@@ -1,12 +1,9 @@
 const express = require('express');
-
+const Routes = require('./routes/userRoutes.js');
 const app = express();
 
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-    res.send('this is working');
-    }
-);
+app.use('/', Routes);
 
 app.listen();
