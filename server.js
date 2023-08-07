@@ -5,7 +5,7 @@ const cors = require('cors');
 app.use(express.static('public'));
 
 app.use('/', Routes);
-app.use(cors("https://dev.ewutc.com"));
+app.use(cors("*"));
 
 
 app.listen();
