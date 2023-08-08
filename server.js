@@ -1,11 +1,13 @@
-const express = require('express');
-const Routes = require('./routes/userRoutes.js');
+import express from 'express';
+import router from './routes/userRoutes.js';
+import cors from 'cors';
 const app = express();
-const cors = require('cors');
-app.use(express.static('public'));
 
-app.use('/', Routes);
+app.use('/', router);
+
 app.use(cors("*"));
 
 
-app.listen();
+app.listen('4000', () => {
+    console.log('Server started on port 4000');
+});
